@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика debounce</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+
+
+      <section class="demo" aria-labelledby="slider-title">
+        <h2 id="slider-title">Завдання 1. Зміна розміру зображення</h2>
+        <p>Переміщуйте повзунок, щоб змінити ширину зображення.</p>
+        <div class="slider">
+          <label class="slider__label" for="image-size">
+            Розмір: <output class="slider__value" for="image-size">50%</output>
+          </label>
+          <input
+            id="image-size"
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider__input"
+          />
+          <img
+            src="https://placehold.co/300x300?text=Image"
+            alt="Приклад зображення для зміни розміру"
+            class="slider__image"
+          />
+        </div>
+      </section>
+
+      <section class="demo" aria-labelledby="pointer-title">
+        <h2 id="pointer-title">Завдання 2. Рух об'єкта за курсором</h2>
+        <p>Рухайте курсор у межах області. Об'єкт плавно переміститься до нього.</p>
+        <div class="playground" aria-label="Область для переміщення об'єкта">
+          <div class="playground__box" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
